@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project: FIX-IT City</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h2>⚡ FIX-IT CITY</h2>
+    <span>TECHNICIAN TERMINAL v2.0</span>
+  </header>
+
+  <main class="container">
+    <section id="home" class="screen active">
+      <div class="hero">
+        <div class="tag">EDUCATIONAL ADVENTURE</div>
+        <h1>PROJECT:<br><span>FIX-IT CITY</span></h1>
+        <p>Think Smart. Find the Pattern.<br>Fix the System.</p>
+        <button onclick="openMissions()">OPEN MISSION BOARD →</button>
+        <p class="school-label">SMKN1BLORA • JUNIOR IT TECHNICIAN PROGRAM</p>
+      </div>
+    </section>
+
+    <section id="missionSelect" class="screen">
+      <div class="section-heading">
+        <div>
+          <div class="tag">MISSION CONTROL</div>
+          <h1>MISSION BOARD</h1>
+          <p>Pilih misi yang sudah terbuka. Selesaikan misi secara berurutan!</p>
+        </div>
+        <button class="secondary" onclick="showScreen('home')">← MENU UTAMA</button>
+      </div>
+      <div class="progress-panel">
+        <div><span>PROGRESS</span><strong id="progressText">0 / 9 MISI</strong></div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+        <div><span>TOTAL XP</span><strong id="totalXP">0 XP</strong></div>
+      </div>
+      <div id="missionList"></div>
+    </section>
+
+    <section id="game" class="screen">
+      <div class="dashboard">
+        <div class="stat"><small>DAY</small><strong id="day">01</strong></div>
+        <div class="stat"><small>ENERGY</small><strong id="energy">100</strong></div>
+        <div class="stat"><small>XP SCORE</small><strong id="score">0</strong></div>
+        <div class="stat"><small>TIME</small><strong id="timer">05:00</strong></div>
+      </div>
+      <div class="mission">
+        <div class="mission-top"><span id="missionNumber">MISSION 01 / 09</span><button class="text-button" onclick="backToMissions()">EXIT MISSION</button></div>
+        <h2 id="missionTitle">School Network Down</h2>
+        <p id="missionDescription"></p>
+      </div>
+      <div id="phaseContent"></div>
+    </section>
+
+    <section id="result" class="screen">
+      <div class="result-card">
+        <div class="tag">MISSION REPORT</div>
+        <h1 id="resultTitle">MISSION COMPLETE!</h1>
+        <p id="resultMessage"></p>
+        <h2 id="finalScore">0 XP</h2>
+        <div id="resultBadge" class="badge">🏆 FIRST IT RESCUE</div>
+        <button onclick="backToMissions()">BACK TO MISSION BOARD</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
